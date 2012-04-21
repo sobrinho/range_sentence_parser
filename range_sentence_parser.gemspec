@@ -15,5 +15,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = RangeSentenceParser::VERSION
 
+  gem.add_development_dependency 'activemodel', '>= 3.0'
   gem.add_development_dependency 'rspec', '>= 2.9'
 end
