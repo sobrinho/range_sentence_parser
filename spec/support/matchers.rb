@@ -6,7 +6,7 @@ end
 
 RSpec::Matchers.define :be_a_valid_sentence do |expected|
   match do |actual|
-    RangeSentenceParser.new(actual).valid?
+    RangeSentenceParser.valid?(actual)
   end
 end
 

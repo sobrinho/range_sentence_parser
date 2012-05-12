@@ -13,6 +13,17 @@ class RangeSentenceParser
     range_sentence_parser.parse!
   end
 
+  # Validate the sentence and return true or false
+  #
+  # Usage:
+  #
+  #   RangeSentenceParser.valid?('1990; 1995-2000; 2005') # => true
+  #   RangeSentenceParser.valid?('1990, 1995-2000, 2005') # => false
+  def self.valid?(sentence)
+    range_sentence_parser = self.new(sentence)
+    range_sentence_parser.valid?
+  end
+
   def initialize(sentence)
     self.sentence = sentence
   end
