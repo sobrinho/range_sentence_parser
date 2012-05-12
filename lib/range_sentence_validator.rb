@@ -9,6 +9,6 @@ class RangeSentenceValidator < ActiveModel::EachValidator
   #     validates :year_sentence, :range_sentence => true
   #   end
   def validate_each(record, attribute, value)
-    record.errors.add(attribute) if RangeSentenceParser.new(value).invalid?
+    record.errors.add(attribute) if RangeSentenceParser.invalid?(value)
   end
 end
