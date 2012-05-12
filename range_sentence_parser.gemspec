@@ -4,9 +4,9 @@ require File.expand_path('../lib/range_sentence_parser/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Gabriel Sobrinho"]
   gem.email         = ["gabriel.sobrinho@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Parser for range sentences like '1990; 1995-2000; 2005'}
+  gem.summary       = %q{Parser for range sentences like '1990; 1995-2000; 2005'}
+  gem.homepage      = "https://github.com/sobrinho/range_sentence_parser"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
