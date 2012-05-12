@@ -1,3 +1,5 @@
+require 'range_sentence_validator' if defined? ActiveModel
+
 class RangeSentenceParser
   # Parse the sentence and return a collection of numbers and/or ranges
   #
