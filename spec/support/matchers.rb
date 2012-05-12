@@ -12,6 +12,6 @@ end
 
 RSpec::Matchers.define :be_an_invalid_sentence do |expected|
   match do |actual|
-    RangeSentenceParser.new(actual).invalid?
+    RangeSentenceParser.invalid?(actual)
   end
 end

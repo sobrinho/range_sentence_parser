@@ -24,6 +24,17 @@ class RangeSentenceParser
     range_sentence_parser.valid?
   end
 
+  # Performs the opposite of valid?
+  #
+  # Usage:
+  #
+  #   RangeSentenceParser.invalid?('1990; 1995-2000; 2005') # => false
+  #   RangeSentenceParser.invalid?('1990, 1995-2000, 2005') # => true
+  def self.invalid?(sentence)
+    range_sentence_parser = self.new(sentence)
+    range_sentence_parser.invalid?
+  end
+
   def initialize(sentence)
     self.sentence = sentence
   end
