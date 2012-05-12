@@ -18,7 +18,34 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Stand-alone:
+
+    RangeSentenceParser.parse!('1990; 1995-2000; 2005')
+    # => [1990, 1995..2000, 2005]
+
+    RangeSentenceParser.valid?('1990; 1995-2000; 2005')
+    # => true
+
+    RangeSentenceParser.invalid?('1990; 1995-2000; 2005')
+    # => false
+
+Integrated with ActiveRecord:
+
+    class AccountingReport < ActiveRecord::Base
+      validates :year_sentence, :range_sentence => true
+
+      def years
+        RangeSentenceParser.parse!(year_sentence)
+      end
+    end
+
+    accounting_report = AccountingReport.new(:year_sentence => '1990; 1995-2000; 2005')
+
+    accounting_report.valid?
+    # => true
+
+    accounting_report.years
+    # => [1990, 1995..2000, 2005]
 
 ## Contributing
 
