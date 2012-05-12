@@ -1,6 +1,8 @@
 # RangeSentenceParser
 
-TODO: Write a gem description
+Parser for range sentences like '1990; 1995-2000; 2005'.
+
+I use it primarily for reports but can be used for anything else.
 
 ## Installation
 
