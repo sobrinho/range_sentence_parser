@@ -1,3 +1,4 @@
+require 'range_sentence_parser/invalid_sentence_error'
 require 'range_sentence_validator' if defined? ActiveModel
 
 class RangeSentenceParser
