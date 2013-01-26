@@ -61,6 +61,7 @@ describe RangeSentenceParser do
     it 'should be for invalid sentences' do
       '1990..1995'.should be_an_invalid_sentence
       '1990, 1995, 2000'.should be_an_invalid_sentence
+      "1990\n1995".should be_an_invalid_sentence
     end
   end
 end

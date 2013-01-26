@@ -55,7 +55,7 @@ class RangeSentenceParser
   end
 
   def valid?
-    sentence.empty? || sentence =~ /^\d+(-\d+)?(\s*;\s*\d+(-\d+)?)*;?$/
+    sentence.empty? || sentence =~ /\A\d+(-\d+)?(\s*;\s*\d+(-\d+)?)*;?\z/
   end
 
   def invalid?
