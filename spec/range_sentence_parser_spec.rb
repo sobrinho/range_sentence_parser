@@ -46,6 +46,36 @@ describe RangeSentenceParser do
     end
   end
 
+  context 'unparse!' do
+    it 'unparses an empty array' do
+      [].should be_unparsed_to ''
+    end
+
+    it 'unparses one number' do
+      [1990].should be_unparsed_to '1990'
+    end
+
+    it 'unparses numbers' do
+      [1990, 1995].should be_unparsed_to '1990; 1995'
+    end
+
+    it 'unparses one range' do
+      [1990..1995].should be_unparsed_to '1990-1995'
+    end
+
+    it 'unparses ranges' do
+      [1990..1995, 2000..2005].should be_unparsed_to '1990-1995; 2000-2005'
+    end
+
+    it 'unparses one number and one range' do
+      [1990, 1995..2000].should be_unparsed_to '1990; 1995-2000'
+    end
+
+    it 'unparses numbers and ranges' do
+      [1990, 1995..2000, 2005, 2010..2015].should be_unparsed_to '1990; 1995-2000; 2005; 2010-2015'
+    end
+  end
+
   context '#valid?' do
     it 'should be for valid sentences' do
       ''.should be_a_valid_sentence
