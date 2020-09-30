@@ -2,7 +2,7 @@
 
 Parser for range sentences like '1990; 1995-2000; 2005'.
 
-I use it primarily for reports but can be used for anything else.
+I have used it primarily for reports but can be used for anything else.
 
 ## Installation
 
@@ -12,13 +12,13 @@ Add this line to your application's Gemfile:
 gem 'range_sentence_parser'
 ```
 
-And then execute:
+And Then Execute:
 
 ``` bash
 $ bundle
 ```
 
-Or install it yourself as:
+Or Install It Yourself As:
 
 ``` bash
 $ gem install range_sentence_parser
@@ -39,7 +39,7 @@ RangeSentenceParser.invalid?('1990; 1995-2000; 2005')
 # => false
 ```
 
-Integrated with ActiveRecord:
+Integrated With ActiveRecord:
 
 ``` ruby
 class AccountingReport < ActiveRecord::Base
@@ -69,4 +69,4 @@ accounting_report.years
 
 ## License
 
-MIT License. Copyright 2012-2013 Gabriel Sobrinho. http://gabrielsobrinho.com
+MIT License. Copyright 2012-2013 Gabriel Sobrinho. http://gabrielsobrinho.com .
